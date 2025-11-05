@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Từ Vựng Anh-Việt</title>
+    <title>Học Từ Vựng Anh-Việt - TOEIC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -15,69 +15,319 @@
     <div id="app"></div>
 
     <script>
-        const vocabularyData = [
-            { english: "cancel a subscription", vietnamese: "hủy bỏ việc đặt báo" },
-            { english: "work number", vietnamese: "số điện thoại cơ quan" },
-            { english: "candidate", vietnamese: "Ứng cư viên" },
-            { english: "ask for a repair visit", vietnamese: "yêu cầu cư người đến sửa (gì đó)" },
-            { english: "accept the conditions", vietnamese: "chấp nhận các điều khoản" },
-            { english: "be accompanied", vietnamese: "được tháp tùng" },
-            { english: "be busy all week", vietnamese: "bận rộn cả tuần" },
-            { english: "travel agent", vietnamese: "nhân viên đại lý du lịch" },
-            { english: "flaw", vietnamese: "lỗi" },
-            { english: "necessary", vietnamese: "cần thiết" },
-            { english: "be due", vietnamese: "tới hạn" },
-            { english: "seminar", vietnamese: "hội thảo chuyên đề" },
-            { english: "How about today?", vietnamese: "Hôm nay thì sao nhỉ?" },
-            { english: "repairman", vietnamese: "thợ sửa chữa" },
-            { english: "rent", vietnamese: "tiền thuê" },
-            { english: "make copies", vietnamese: "sao chép tài liệu" },
-            { english: "distribute", vietnamese: "phân phát" },
-            { english: "draft plan", vietnamese: "kế hoạch sơ thảo" },
-            { english: "extend the contract", vietnamese: "gia hạn hợp đồng" },
-            { english: "proofread the documents", vietnamese: "đọc để sửa lại tài liệu" },
-            { english: "make an appointment", vietnamese: "đặt hẹn" },
-            { english: "fill in the form", vietnamese: "điền vào đơn" },
-            { english: "supplies", vietnamese: "nguồn cung ứng" },
-            { english: "place the order", vietnamese: "đặt hàng" },
-            { english: "contractor", vietnamese: "nhà thầu" },
-            { english: "decline", vietnamese: "từ chối" },
-            { english: "be scheduled to do", vietnamese: "được sắp xếp làm gì" },
-            { english: "shippment", vietnamese: "chuyến hàng" },
-            { english: "receipt", vietnamese: "giấy biên lai" },
-            { english: "warranty", vietnamese: "giấy bảo hành" },
-            { english: "attend the reception", vietnamese: "dự tiệc chiêu đãi" },
-            { english: "improve", vietnamese: "cải thiện" },
-            { english: "upgrade", vietnamese: "nâng cấp" },
-            { english: "take a break", vietnamese: "giải lao" },
-            { english: "invoice", vietnamese: "hóa đơn" },
-            { english: "home number", vietnamese: "số điện thoại nhà" },
-            { english: "house number", vietnamese: "số nhà" },
-            { english: "attend the orientation", vietnamese: "tham gia buổi hướng dẫn" },
-            { english: "check the terms", vietnamese: "kiểm tra các điều khoản" },
-            { english: "own the properties", vietnamese: "sở hữu tài sản" },
-            { english: "approve the proposal", vietnamese: "chấp nhận đề xuất" },
-            { english: "be hired", vietnamese: "được thuê" },
-            { english: "meet the client", vietnamese: "gặp khách hàng" },
-            { english: "owner", vietnamese: "người chủ" },
-            { english: "program director", vietnamese: "giám đốc chương trình" },
-            { english: "return the call", vietnamese: "gọi lại điện thoại" },
-            { english: "document the meeting", vietnamese: "ghi chép cuộc họp" },
-            { english: "get a loan from the bank", vietnamese: "vay tiền từ ngân hàng" },
-            { english: "shipping company", vietnamese: "công ty vận chuyển" },
-            { english: "meet the deadline", vietnamese: "hoàn thành đúng hạn" },
-            { english: "last at least 2 weeks", vietnamese: "kéo dài ít nhất 2 tuần" },
-            { english: "new staff recruitment", vietnamese: "tuyển dụng nhân viên mới" },
-            { english: "improve sales figures", vietnamese: "cải thiện doanh số bán hàng" },
-            { english: "cafeteria", vietnamese: "quán ăn tự phục vụ" },
-            { english: "vice president", vietnamese: "phó chủ tịch" },
-            { english: "pay interests", vietnamese: "trả lãi suất" },
-            { english: "start the camcorder", vietnamese: "bật máy quay phim" },
-            { english: "agenda", vietnamese: "chương trình nghị sự" },
-            { english: "finance statement", vietnamese: "báo cáo tài chính" }
+        // Từ vựng Part 1 (giữ nguyên)
+        const vocabularyPart1 = [
+            // Hành động của Đầu
+            { english: "nod", vietnamese: "gật đầu" },
+            { english: "shake", vietnamese: "lắc đầu" },
+            { english: "tilt", vietnamese: "nghiêng đầu" },
+            
+            // Hành động của Mắt
+            { english: "cry", vietnamese: "khóc" },
+            { english: "look at", vietnamese: "nhìn" },
+            { english: "observe", vietnamese: "quan sát" },
+            { english: "stare at", vietnamese: "nhìn chăm chú" },
+            
+            // Hành động của Mũi
+            { english: "smell", vietnamese: "ngửi" },
+            { english: "sneeze", vietnamese: "hắt xì" },
+            
+            // Hành động của Tay
+            { english: "clap", vietnamese: "vỗ" },
+            { english: "grab", vietnamese: "nắm" },
+            { english: "hold", vietnamese: "cầm" },
+            { english: "knock", vietnamese: "gõ" },
+            { english: "lift", vietnamese: "nâng lên" },
+            { english: "pick (up)", vietnamese: "nhặt lên/ đón" },
+            { english: "point (at/to)", vietnamese: "chỉ về phía ai, cái gì" },
+            { english: "press", vietnamese: "ấn" },
+            { english: "pull", vietnamese: "kéo" },
+            { english: "push", vietnamese: "đẩy" },
+            { english: "shake hands", vietnamese: "bắt tay" },
+            { english: "throw", vietnamese: "ném" },
+            { english: "touch", vietnamese: "chạm" },
+            { english: "type", vietnamese: "đánh (máy)" },
+            { english: "wave", vietnamese: "vẫy" },
+            
+            // Hành động của Chân
+            { english: "cross the road", vietnamese: "băng qua đường" },
+            { english: "jump", vietnamese: "nhảy" },
+            { english: "walk", vietnamese: "đi" },
+            
+            // Cụm từ thường gặp
+            { english: "typing on the keyboard", vietnamese: "đang gõ trên bàn phím" },
+            { english: "pointing at the screen", vietnamese: "đang chỉ vào màn hình" },
+            { english: "listening to headphones", vietnamese: "đang nghe tai nghe" },
+            { english: "holding a clipboard", vietnamese: "đang cầm một tấm kẹp giấy" },
+            { english: "writing on a whiteboard", vietnamese: "đang viết trên bảng trắng" },
+            { english: "standing at the podium", vietnamese: "đang đứng ở bục phát biểu" },
+            { english: "flipping through a book", vietnamese: "đang lật qua các trang sách" },
+            { english: "using a calculator", vietnamese: "đang sử dụng máy tính" },
+            { english: "pointing at a map", vietnamese: "đang chỉ vào một bản đồ" },
+            { english: "checking a wristwatch", vietnamese: "đang kiểm tra đồng hồ đeo tay" },
+            
+            // 2 người - Hành động
+            { english: "are high-fiving", vietnamese: "đập tay" },
+            { english: "are hugging each other", vietnamese: "ôm nhau" },
+            { english: "are chatting animatedly", vietnamese: "trò chuyện sôi nổi" },
+            { english: "are laughing together", vietnamese: "cười cùng nhau" },
+            { english: "are sharing a meal", vietnamese: "chia sẻ bữa ăn" },
+            { english: "are clinking glasses", vietnamese: "chọc ly" },
+            { english: "are walking side by side", vietnamese: "đi bên cạnh nhau" },
+            { english: "are jogging together", vietnamese: "chạy bộ cùng nhau" },
+            { english: "are helping each other", vietnamese: "giúp đỡ nhau" },
+            { english: "are waving goodbye", vietnamese: "vẫy tay chào tạm biệt" },
+            
+            // 2 người - Tư thế
+            { english: "are standing face to face", vietnamese: "đứng đối diện nhau" },
+            { english: "are sitting back to back", vietnamese: "ngồi lưng sát lưng" },
+            { english: "are leaning in to whisper", vietnamese: "dựa vào để thì thầm" },
+            { english: "are sitting cross-legged", vietnamese: "ngồi chéo chân" },
+            { english: "are lying side by side", vietnamese: "nằm sát bên nhau" },
+            { english: "are kneeling in prayer", vietnamese: "quỳ gối cầu nguyện" },
+            { english: "are posing for a photo", vietnamese: "tạo dáng chụp hình" },
+            { english: "are gesturing emphatically", vietnamese: "điệu bộ mạnh mẽ" },
+            { english: "are shrugging their shoulders", vietnamese: "nhún vai" },
+            { english: "are holding hands", vietnamese: "nắm tay nhau" },
+            
+            // 2 người - Mắt
+            { english: "are exchanging glances", vietnamese: "đang trao đổi ánh nhìn" },
+            { english: "are making eye contact", vietnamese: "đang liên lạc bằng ánh mắt" },
+            { english: "are gazing into each other's eyes", vietnamese: "đang nhìn vào đôi mắt của nhau" },
+            { english: "are giving each other a meaningful look", vietnamese: "đang trao nhau ánh nhìn ý nghĩa" },
+            { english: "are watching a play", vietnamese: "xem vở kịch" },
+            { english: "are studying the menu", vietnamese: "nghiên cứu thực đơn" },
+            { english: "are examining the equipment", vietnamese: "kiểm tra thiết bị" },
+            
+            // Xung quanh
+            { english: "is displayed in the window", vietnamese: "được trưng bày trong cửa sổ" },
+            { english: "are arranged neatly on the shelves", vietnamese: "được sắp xếp gọn gàng trên kệ sách" },
+            { english: "is hanging from the ceiling", vietnamese: "treo từ trần nhà" },
+            { english: "are scattered across the floor", vietnamese: "được phân bố rải rác trên sàn nhà" },
+            { english: "is stored in the cabinet", vietnamese: "được lưu trữ trong tủ" },
+            { english: "are piled up in the corner", vietnamese: "được chất chồng ở góc phòng" },
+            { english: "is placed in front of the mirror", vietnamese: "được đặt phía trước gương" },
+            { english: "are hanging from the hooks", vietnamese: "được treo từ móc treo" },
+            { english: "is tucked under the bed", vietnamese: "được nhét dưới giường" },
+            
+            // Nhiều người
+            { english: "they are seated around the table", vietnamese: "ngồi xung quanh một cái bàn" },
+            { english: "they are gathering around the fountain", vietnamese: "tụ tập xung quanh đài phun nước" },
+            { english: "people are present at the terminal", vietnamese: "nhiều người đang ở tại nhà ga" },
+            { english: "they are inside the theater", vietnamese: "họ đang ở trong rạp hát" },
+            
+            // Bị động
+            { english: "clothes are being folded", vietnamese: "quần áo đang được gấp" },
+            { english: "packages are being sorted", vietnamese: "các gói hàng đang được phân loại" },
+            { english: "vehicles are being washed", vietnamese: "các phương tiện đang được rửa" },
+            { english: "messages are being sent", vietnamese: "những tin nhắn đang được gửi đi" },
+            { english: "documents are being scanned", vietnamese: "các tài liệu đang được quét" },
+            { english: "orders are being processed", vietnamese: "các đơn hàng đang được xử lý" },
+            { english: "tickets are being printed", vietnamese: "các vé đang được in" },
+            { english: "equipment is being tested", vietnamese: "thiết bị đang được kiểm tra" },
+            
+            // Hiện tại hoàn thành
+            { english: "the bus has just arrived", vietnamese: "xe buýt vừa đến" },
+            { english: "passengers have started boarding", vietnamese: "hành khách đã bắt đầu lên xe" },
+            { english: "the plane has landed", vietnamese: "máy bay vừa mới hạ cánh" },
+            { english: "the plane has taken off", vietnamese: "máy bay vừa mới cất cánh" },
+            
+            // Trạng thái & nhóm
+            { english: "be crowded with people", vietnamese: "đông đúc người" },
+            { english: "be filled with people", vietnamese: "được lấp đầy bởi người" },
+            { english: "be full of people", vietnamese: "đầy ắp những người" },
+            { english: "be grouped together", vietnamese: "được nhóm lại với nhau" },
+            { english: "chatting in a group", vietnamese: "trò chuyện trong một nhóm" },
+            
+            // Thư giãn
+            { english: "picnicking in the park", vietnamese: "dã ngoại trong công viên" },
+            { english: "enjoying a cup of coffee at a sidewalk café", vietnamese: "thưởng thức một tách cà phê tại quán cà phê ven đường" },
+            { english: "taking a nap in the shade", vietnamese: "nằm ngủ dưới bóng mát" },
+            { english: "having a barbecue in the backyard", vietnamese: "nướng BBQ trong sân sau" },
+            { english: "listening to music in a cozy corner", vietnamese: "nghe nhạc ở góc nhỏ ấm cúng" },
+            { english: "painting outdoors in the countryside", vietnamese: "vẽ tranh ngoài trời ở nông thôn" },
+            
+            // Vật dụng
+            { english: "computer", vietnamese: "máy vi tính" },
+            { english: "monitor", vietnamese: "màn hình máy tính" },
+            { english: "printer", vietnamese: "máy in" },
+            { english: "photocopier", vietnamese: "máy photo" },
+            { english: "projector", vietnamese: "máy chiếu" },
+            { english: "shelf", vietnamese: "kệ" },
+            { english: "couch", vietnamese: "ghế bành" },
+            { english: "lamp", vietnamese: "đèn ngủ" },
+            { english: "fan", vietnamese: "quạt" },
+            { english: "roof", vietnamese: "mái nhà" },
+            { english: "furniture", vietnamese: "nội thất" },
+            { english: "airplane", vietnamese: "máy bay" },
+            { english: "bike", vietnamese: "xe đạp" },
+            { english: "bicycle", vietnamese: "xe đạp" },
+            { english: "boat", vietnamese: "thuyền" },
+            { english: "bus", vietnamese: "xe buýt" },
+            { english: "traffic light", vietnamese: "đèn giao thông" },
+            { english: "traffic jam", vietnamese: "kẹt xe, ùn tắc" },
+            
+            // Sự vật
+            { english: "be stored in a cupboard", vietnamese: "được lưu trữ trong tủ" },
+            { english: "be being packaged", vietnamese: "đang được đóng gói" },
+            { english: "have been placed on a shelf", vietnamese: "đã được đặt trên kệ" },
+            { english: "be being transported in crates", vietnamese: "đang được vận chuyển trong thùng" },
+            { english: "have been assembled", vietnamese: "đã được lắp ráp" },
+            { english: "be being inspected", vietnamese: "đang được kiểm tra" },
+            { english: "be in the sunlight", vietnamese: "ở dưới ánh nắng mặt trời" },
+            { english: "have been stacked neatly", vietnamese: "đã được xếp gọn gàng" },
+            { english: "be being manufactured", vietnamese: "đang được sản xuất" },
+            { english: "have been upgraded", vietnamese: "đã được nâng cấp" },
+            { english: "be in the packaging process", vietnamese: "đang trong quá trình đóng gói" },
+            { english: "have been labeled with stickers", vietnamese: "đã được dán nhãn bằng tem" },
+            { english: "be being polished", vietnamese: "đang được đánh bóng" },
+            
+            // Phong cảnh
+            { english: "beneath the tree", vietnamese: "dưới tán cây" },
+            { english: "beside the river", vietnamese: "bên cạnh dòng sông" },
+            { english: "along the pathway", vietnamese: "dọc theo lối đi" },
+            { english: "adjacent to the building", vietnamese: "kế bên tòa nhà" },
+            { english: "amidst the flowers", vietnamese: "giữa những bông hoa" },
+            { english: "under the clear sky", vietnamese: "dưới bầu trời trong xanh" },
+            { english: "near the mountains", vietnamese: "gần núi" },
+            { english: "across the meadow", vietnamese: "qua cánh đồng" },
+            { english: "overlooking the lake", vietnamese: "nhìn ra hồ" },
+            { english: "surrounded by greenery", vietnamese: "bao quanh bởi cây cỏ xanh" },
+            { english: "within the garden", vietnamese: "trong khu vườn" },
+            { english: "facing the sunset", vietnamese: "hướng về phía hoàng hôn" },
+            { english: "beneath the towering trees", vietnamese: "dưới bóng cây cao vút" },
+            { english: "by the tranquil pond", vietnamese: "gần ao êm đềm" },
+            { english: "amidst the urban skyline", vietnamese: "giữa đường chân trời thành phố" },
+            { english: "in the foreground", vietnamese: "ở phía trước cảnh" },
+            { english: "in the background", vietnamese: "ở phía nền" },
+            { english: "adjacent to the sidewalk", vietnamese: "gần lề đường" },
+            { english: "by the cityscape", vietnamese: "bên cạnh bức tranh thành phố" },
+            { english: "within the park", vietnamese: "trong công viên" },
+            
+            // Giới từ
+            { english: "above", vietnamese: "ở bên trên" },
+            { english: "below", vietnamese: "ở bên dưới" },
+            { english: "on", vietnamese: "phía trên" },
+            { english: "under", vietnamese: "phía dưới" },
+            { english: "behind", vietnamese: "phía sau" },
+            { english: "in front of", vietnamese: "ở đằng trước" },
+            { english: "at", vietnamese: "tại" },
+            { english: "in", vietnamese: "bên trong" },
+            { english: "between", vietnamese: "giữa 2 người/ vật" },
+            { english: "among", vietnamese: "ở giữa, > 2 người/ vật" },
+            { english: "next to", vietnamese: "ngay cạnh" },
+            { english: "by", vietnamese: "bên cạnh" }
         ];
 
-        let mode = 'menu';
+        // Từ vựng Part 2 - CẬP NHẬT MỚI
+        const vocabularyPart2 = [
+            // WHO/WHOM/WHOSE - Positions/Titles
+            { english: "accountant", vietnamese: "kế toán" },
+            { english: "board of directors", vietnamese: "ban giám đốc" },
+            { english: "division head", vietnamese: "trưởng bộ phận" },
+            { english: "executive officer", vietnamese: "nhân viên điều hành" },
+            { english: "representative", vietnamese: "đại diện" },
+            { english: "security officer", vietnamese: "nhân viên an ninh" },
+            { english: "supervisor", vietnamese: "giám sát" },
+            { english: "assistant", vietnamese: "trợ lý" },
+            { english: "chief executive officer (CEO)", vietnamese: "giám đốc điều hành (CEO)" },
+            { english: "editor", vietnamese: "biên tập viên" },
+            { english: "receptionist", vietnamese: "lễ tân" },
+            { english: "secretary", vietnamese: "thư ký" },
+            { english: "senior director", vietnamese: "giám đốc cấp cao" },
+            { english: "vice president", vietnamese: "phó chủ tịch" },
+            
+            // WHO/WHOM/WHOSE - Departments/Offices
+            { english: "accounting office", vietnamese: "phòng kế toán" },
+            { english: "human resources department", vietnamese: "bộ phận nhân sự" },
+            { english: "payroll department", vietnamese: "bộ phận tính lương" },
+            { english: "public relations department", vietnamese: "bộ phận quan hệ công chúng" },
+            { english: "security", vietnamese: "phòng bảo vệ" },
+            { english: "customer service department", vietnamese: "bộ phận dịch vụ khách hàng" },
+            { english: "personnel department", vietnamese: "bộ phận nhân sự" },
+            { english: "purchasing department", vietnamese: "bộ phận mua hàng" },
+            { english: "overseas division", vietnamese: "bộ phận ở nước ngoài" },
+            
+            // WHERE - Places/Locations
+            { english: "at a law firm", vietnamese: "tại một công ty luật" },
+            { english: "in one's mailroom", vietnamese: "trong hộp thư" },
+            { english: "in the file cabinet", vietnamese: "trong tủ tài liệu" },
+            { english: "on one's desk", vietnamese: "trên bàn của một người" },
+            { english: "at the top of the shelf", vietnamese: "ở đầu kệ" },
+            { english: "in the drawer", vietnamese: "trong ngăn kéo" },
+            
+            // WHERE - Directions
+            { english: "across the street", vietnamese: "bên kia đường" },
+            { english: "at the front counter", vietnamese: "ở quầy phía trước" },
+            { english: "from the main office", vietnamese: "từ văn phòng chính" },
+            { english: "near the park", vietnamese: "gần công viên" },
+            { english: "on the first floor", vietnamese: "ở tầng một" },
+            { english: "opposite the building", vietnamese: "đối diện tòa nhà" },
+            { english: "straight down to", vietnamese: "ngay phía dưới" },
+            { english: "around the corner", vietnamese: "ở trong góc, ở rất gần" },
+            { english: "by the front door", vietnamese: "gần cửa trước" },
+            { english: "in front of the lobby", vietnamese: "trước tiền sảnh" },
+            { english: "next to the hotel", vietnamese: "bên cạnh khách sạn" },
+            { english: "on the next corner", vietnamese: "ở góc tiếp theo" },
+            { english: "over there", vietnamese: "ở phía đằng kia" },
+            { english: "to the post office", vietnamese: "đến bưu điện" },
+            
+            // WHEN - Past tense
+            { english: "already", vietnamese: "đã, rồi" },
+            { english: "last week", vietnamese: "tuần trước" },
+            { english: "a week ago", vietnamese: "một tuần trước" },
+            { english: "a couple of days ago", vietnamese: "một vài ngày trước" },
+            
+            // WHEN - Present tense
+            { english: "now", vietnamese: "bây giờ" },
+            { english: "for now", vietnamese: "cho thời điểm bây giờ" },
+            { english: "right now", vietnamese: "ngay bây giờ" },
+            { english: "usually", vietnamese: "thường xuyên" },
+            { english: "regularly", vietnamese: "thường xuyên" },
+            { english: "often", vietnamese: "thường xuyên" },
+            
+            // WHEN - Future tense
+            { english: "soon", vietnamese: "sớm" },
+            { english: "in about an hour", vietnamese: "trong khoảng một giờ" },
+            { english: "sometime next week", vietnamese: "vào tuần sau" },
+            { english: "not for another hour", vietnamese: "không xảy ra trong một giờ nữa" },
+            { english: "any minute", vietnamese: "bất kỳ lúc nào" },
+            { english: "by the end of next week", vietnamese: "vào cuối tuần sau" },
+            
+            // WHEN - Indefinite time
+            { english: "not until next week", vietnamese: "không cho đến tuần sau" },
+            { english: "when the construction is completed", vietnamese: "khi công trình được hoàn thành" },
+            { english: "right after the presentation is ready", vietnamese: "ngay sau khi bài thuyết trình đã sẵn sàng" },
+            { english: "later today", vietnamese: "sau ngày hôm nay" },
+            { english: "soon, I think", vietnamese: "tôi nghĩ sẽ sớm thôi" },
+            
+            // WHY - Reasons
+            { english: "to discuss", vietnamese: "để thảo luận" },
+            { english: "to meet with", vietnamese: "để gặp" },
+            { english: "for advice", vietnamese: "để xin lời khuyên" },
+            { english: "because of a traffic jam", vietnamese: "bởi vì tắc đường" },
+            { english: "due to heavy rain", vietnamese: "do mưa lớn" },
+            
+            // HOW - Method
+            { english: "by e-mail", vietnamese: "bằng e-mail" },
+            { english: "in person", vietnamese: "trực tiếp" },
+            { english: "by cash", vietnamese: "bằng tiền mặt" },
+            { english: "by credit card", vietnamese: "bằng thẻ tín dụng" },
+            
+            // HOW - Frequency
+            { english: "every morning", vietnamese: "mỗi sáng" },
+            { english: "once a month", vietnamese: "mỗi tháng một lần" },
+            { english: "biannually", vietnamese: "mỗi năm 2 lần" },
+            { english: "annually", vietnamese: "mỗi năm 1 lần" },
+            
+            // HOW - Duration
+            { english: "for about an hour", vietnamese: "khoảng 1 giờ" },
+            { english: "over weeks", vietnamese: "khoảng vài tuần" }
+        ];
+
+        let currentPart = null;
+        let vocabularyData = [];
+        let mode = 'part-selection';
         let currentIndex = 0;
         let showAnswer = false;
         let direction = 'eng-to-viet';
@@ -85,6 +335,19 @@
         let score = { correct: 0, incorrect: 0 };
         let userAnswer = '';
         let feedback = null;
+
+        function selectPart(part) {
+            currentPart = part;
+            vocabularyData = part === 1 ? vocabularyPart1 : vocabularyPart2;
+            mode = 'menu';
+            render();
+        }
+
+        function backToPartSelection() {
+            currentPart = null;
+            mode = 'part-selection';
+            render();
+        }
 
         function shuffle(array) {
             const shuffled = [...array];
@@ -138,11 +401,54 @@
             render();
         }
 
+        function renderPartSelection() {
+            return `
+                <div class="max-w-3xl mx-auto p-8">
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl font-bold text-blue-600 mb-2">Học Từ Vựng TOEIC</h1>
+                        <p class="text-gray-600">Chọn Part bạn muốn học</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <button onclick="selectPart(1)" class="bg-white border-4 border-green-500 rounded-xl p-8 hover:bg-green-50 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                            <div class="text-5xl mb-4">📸</div>
+                            <h2 class="text-2xl font-bold text-gray-800 mb-3">Part 1</h2>
+                            <p class="text-gray-600 mb-2">Mô tả hình ảnh</p>
+                            <p class="text-sm text-gray-500">${vocabularyPart1.length} từ vựng</p>
+                            <div class="mt-4 text-xs text-gray-500 text-left">
+                                <p>• Hành động con người</p>
+                                <p>• Miêu tả vật thể</p>
+                                <p>• Phong cảnh & vị trí</p>
+                            </div>
+                        </button>
+
+                        <button onclick="selectPart(2)" class="bg-white border-4 border-purple-500 rounded-xl p-8 hover:bg-purple-50 transition-all shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                            <div class="text-5xl mb-4">💬</div>
+                            <h2 class="text-2xl font-bold text-gray-800 mb-3">Part 2</h2>
+                            <p class="text-gray-600 mb-2">Hỏi & Đáp</p>
+                            <p class="text-sm text-gray-500">${vocabularyPart2.length} từ vựng</p>
+                            <div class="mt-4 text-xs text-gray-500 text-left">
+                                <p>• Who/Where/When/Why/How</p>
+                                <p>• Chức danh & Phòng ban</p>
+                                <p>• Thời gian & Địa điểm</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
         function renderMenu() {
             return `
                 <div class="max-w-2xl mx-auto p-8">
+                    <div class="mb-6">
+                        <button onclick="backToPartSelection()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+                            ← Chọn Part khác
+                        </button>
+                    </div>
+
                     <div class="text-center mb-12">
-                        <h1 class="text-4xl font-bold text-blue-600 mb-2">Học Từ Vựng Anh-Việt</h1>
+                        <h1 class="text-4xl font-bold text-blue-600 mb-2">Part ${currentPart} - Từ Vựng</h1>
                         <p class="text-gray-600">Chọn phương pháp học của bạn</p>
                         <p class="text-sm text-gray-500 mt-2">Tổng số từ: ${vocabularyData.length}</p>
                     </div>
@@ -187,7 +493,7 @@
                         </button>
                     </div>
 
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Danh Sách Từ Vựng</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Part ${currentPart} - Danh Sách Từ Vựng</h2>
                     
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
                         <table class="w-full">
@@ -216,8 +522,8 @@
                         <button onclick="startMode('menu')" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors">
                             ← Quay lại
                         </button>
-                        <div class="text-gray-600">
-                            ${currentIndex + 1} / ${shuffledVocab.length}
+                        <div class="text-gray-600 font-medium">
+                            Part ${currentPart} | ${currentIndex + 1} / ${shuffledVocab.length}
                         </div>
                     </div>
 
@@ -265,8 +571,8 @@
                         <button onclick="startMode('menu')" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors">
                             ← Quay lại
                         </button>
-                        <div class="text-gray-600">
-                            ${currentIndex + 1} / ${shuffledVocab.length}
+                        <div class="text-gray-600 font-medium">
+                            Part ${currentPart} | ${currentIndex + 1} / ${shuffledVocab.length}
                         </div>
                     </div>
 
@@ -354,7 +660,8 @@
 
         function render() {
             let html = '';
-            if (mode === 'menu') html = renderMenu();
+            if (mode === 'part-selection') html = renderPartSelection();
+            else if (mode === 'menu') html = renderMenu();
             else if (mode === 'list') html = renderList();
             else if (mode === 'flashcard') html = renderFlashcard();
             else if (mode === 'quiz') html = renderQuiz();
